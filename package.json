@@ -2,13 +2,16 @@
   "name": "mavka-vscode",
   "displayName": "Мавка",
   "description": "Підтримка Мавки у vscode",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.71.0"
   },
   "categories": [
     "Programming Languages"
   ],
+  "repository": {
+    "url": "https://github.com/mavka-ukr/vscode"
+  },
   "contributes": {
     "languages": [{
       "id": "мавка",
