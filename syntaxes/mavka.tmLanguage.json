@@ -1,0 +1,32 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Мавка",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.mavka",
+				"match": "\\b(дія|якщо|інакше|структура|вернути|рядок|число|логічне|так|ні|пребрати|кожній|кінець|як|взяти|дати|тривала|чекати)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.mavka",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.mavka",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.мавка"
+}

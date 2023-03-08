@@ -1,0 +1,25 @@
+{
+  "name": "mavka-vscode",
+  "displayName": "Мавка",
+  "description": "Підтримка Мавки у vscode",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.71.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "мавка",
+      "aliases": ["Мавка", "мавка"],
+      "extensions": [".м"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "мавка",
+      "scopeName": "source.мавка",
+      "path": "./syntaxes/mavka.tmLanguage.json"
+    }]
+  }
+}
