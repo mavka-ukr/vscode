@@ -71,6 +71,11 @@
 				{
 					"name": "support.type.primitive.mavka",
 					"match": "\\b(число|текст|рядок|логічне|об'єкт|пусто)\\b"
+				},
+				{
+					"comment": "назва структури",
+					"name": "support.type.struct.mavka",
+					"match": "(?<=структура\\s)\\b(\\w+)\\b"
 				}
 			]
 		},
