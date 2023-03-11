@@ -7,14 +7,19 @@
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#constants"
 		}
 	],
 	"repository": {
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.mavka",
-				"match": "\\b(дія|не|якщо|інакше|рівно|більше|менше|структура|вернути|рядок|число|логічне|так|ні|пребрати|кожній|кінець|як|взяти|дати|тривала|чекати)\\b"
-			}]
+			"patterns": [
+				{
+					"name": "keyword.control.mavka",
+					"match": "\\b(дія|не|якщо|інакше|рівно|більше|менше|структура|вернути|рядок|число|логічне|пребрати|кожній|кінець|як|взяти|дати|тривала|чекати)\\b"
+				}
+			]
 		},
 		"strings": {
 			"name": "string.quoted.double.mavka",
@@ -24,6 +29,18 @@
 				{
 					"name": "constant.character.escape.mavka",
 					"match": "\\\\."
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.language.mavka",
+					"match": "\\b(так|ні)\\b"
+				},
+				{
+					"name": "constant.numeric.mavka",
+					"match": "\\b\\d+(\\.\\d+)?\\b"
 				}
 			]
 		}
