@@ -16,6 +16,9 @@
 		},
 		{
 			"include": "#types"
+		},
+		{
+			"include": "#functions"
 		}
 	],
 	"repository": {
@@ -68,6 +71,20 @@
 				{
 					"name": "support.type.primitive.mavka",
 					"match": "\\b(число|текст|рядок|логічне|об'єкт|пусто)\\b"
+				}
+			]
+		},
+		"functions": {
+			"patterns": [
+				{
+					"comment": "виклик функції",
+					"name": "entity.name.function.mavka",
+					"match": "(?<!\\.)\\b(\\w+)\\s*\\("
+				},
+				{
+					"comment": "виклик методу",
+					"name": "entity.name.function.mavka",
+					"match": "(?<=\\.)\\b(\\w+)\\s*\\("
 				}
 			]
 		}
