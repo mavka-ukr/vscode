@@ -1,8 +1,9 @@
 {
   "name": "mavka-vscode",
   "displayName": "Мавка",
-  "description": "Підтримка Мавки у vscode",
-  "version": "0.0.4",
+  "description": "Підтримка Мавки у VSCode",
+  "publisher": "mavka",
+  "version": "0.0.5",
   "engines": {
     "vscode": "^1.71.0"
   },
