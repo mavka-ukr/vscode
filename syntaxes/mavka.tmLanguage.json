@@ -10,6 +10,9 @@
 		},
 		{
 			"include": "#constants"
+		},
+		{
+			"include": "#comments"
 		}
 	],
 	"repository": {
@@ -41,6 +44,19 @@
 				{
 					"name": "constant.numeric.mavka",
 					"match": "\\b\\d+(\\.\\d+)?\\b"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.mavka",
+					"match": ";;.*$"
+				},
+				{
+					"name": "comment.block.mavka",
+					"begin": ";\\-\\-.*",
+					"end": "\\-\\-;"
 				}
 			]
 		}
