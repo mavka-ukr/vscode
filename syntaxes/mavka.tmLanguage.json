@@ -19,6 +19,9 @@
 		},
 		{
 			"include": "#functions"
+		},
+		{
+			"include": "#variables"
 		}
 	],
 	"repository": {
@@ -90,6 +93,15 @@
 					"comment": "виклик методу",
 					"name": "entity.name.function.mavka",
 					"match": "(?<=\\.)\\b(\\w+)\\s*\\("
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"comment": "змінна",
+					"name": "variable.other.mavka",
+					"match": "\\b(\\w+)\\b"
 				}
 			]
 		}
