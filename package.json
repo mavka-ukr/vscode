@@ -38,7 +38,7 @@
                 "snippets": [
                     {
                         "language": "мавка",
-                        "path": "./snippets/snippets.json"
+                        "path": "./snippets/mavka.snippets.json"
                     }
                 ]
 	},
