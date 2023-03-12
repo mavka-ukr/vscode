@@ -7,14 +7,31 @@
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#types"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#variables"
 		}
 	],
 	"repository": {
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.mavka",
-				"match": "\\b(дія|не|якщо|інакше|рівно|більше|менше|структура|вернути|рядок|число|логічне|так|ні|пребрати|кожній|кінець|як|взяти|дати|тривала|чекати)\\b"
-			}]
+			"patterns": [
+				{
+					"name": "keyword.control.mavka",
+					"match": "\\b(дія|не|якщо|інакше|рівно|більше|менше|структура|вернути|перебрати|кожній|кінець|як|взяти|дати|тривала|чекати)\\b"
+				}
+			]
 		},
 		"strings": {
 			"name": "string.quoted.double.mavka",
@@ -24,6 +41,67 @@
 				{
 					"name": "constant.character.escape.mavka",
 					"match": "\\\\."
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.language.mavka",
+					"match": "\\b(так|ні)\\b"
+				},
+				{
+					"name": "constant.numeric.mavka",
+					"match": "\\b\\d+(\\.\\d+)?\\b"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.mavka",
+					"match": ";;.*$"
+				},
+				{
+					"name": "comment.block.mavka",
+					"begin": ";\\-\\-.*",
+					"end": "\\-\\-;"
+				}
+			]
+		},
+		"types": {
+			"patterns": [
+				{
+					"name": "support.type.primitive.mavka",
+					"match": "\\b(число|текст|рядок|логічне|об'єкт|пусто)\\b"
+				},
+				{
+					"comment": "назва структури",
+					"name": "support.type.struct.mavka",
+					"match": "(?<=структура\\s)\\b(\\w+)\\b"
+				}
+			]
+		},
+		"functions": {
+			"patterns": [
+				{
+					"comment": "виклик функції",
+					"name": "entity.name.function.mavka",
+					"match": "(?<!\\.)\\b(\\w+)\\s*\\("
+				},
+				{
+					"comment": "виклик методу",
+					"name": "entity.name.function.mavka",
+					"match": "(?<=\\.)\\b(\\w+)\\s*\\("
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"comment": "змінна",
+					"name": "variable.other.mavka",
+					"match": "\\b(\\w+)\\b"
 				}
 			]
 		}
