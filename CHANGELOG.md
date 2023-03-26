@@ -1,5 +1,8 @@
 # Change Log
 
+## [0.0.10]
+- https://github.com/mavka-ukr/vscode/pull/7
+
 ## [0.0.9]
 
 - https://github.com/mavka-ukr/vscode/pull/5
