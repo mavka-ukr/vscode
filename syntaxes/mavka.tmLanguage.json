@@ -78,7 +78,7 @@
 				{
 					"comment": "назва структури",
 					"name": "support.type.struct.mavka",
-					"match": "(?<=структура\\s)\\b(\\w+)\\b"
+					"match": "(?<=структура\\s)\\b(\\w+'?\\w+)\\b"
 				}
 			]
 		},
@@ -87,12 +87,12 @@
 				{
 					"comment": "виклик функції",
 					"name": "entity.name.function.mavka",
-					"match": "(?<!\\.)\\b(\\w+)\\s*\\("
+					"match": "(?<!\\.)\\b(\\w+'?\\w+)\\s*\\("
 				},
 				{
 					"comment": "виклик методу",
 					"name": "entity.name.function.mavka",
-					"match": "(?<=\\.)\\b(\\w+)\\s*\\("
+					"match": "(?<=\\.)\\b(\\w+'?\\w+)\\s*\\("
 				}
 			]
 		},
@@ -101,7 +101,7 @@
 				{
 					"comment": "змінна",
 					"name": "variable.other.mavka",
-					"match": "\\b(\\w+)\\b"
+					"match": "\\b(\\w+'?\\w+)\\b"
 				}
 			]
 		}
