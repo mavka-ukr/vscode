@@ -101,7 +101,7 @@
 				{
 					"comment": "змінна",
 					"name": "variable.other.mavka",
-					"match": "\\b(\\w+)\\b"
+					"match": "\\b(\\w+'\\w+)\\b"
 				}
 			]
 		}
