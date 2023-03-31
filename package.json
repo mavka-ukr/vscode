@@ -25,7 +25,11 @@
 				"extensions": [
 					".м"
 				],
-				"configuration": "./language-configuration.json"
+				"configuration": "./language-configuration.json",
+				"icon": {
+					"light": "./icons/icon-light.png",
+					"dark": "./icons/icon-dark.png"
+				}
 			}
 		],
 		"grammars": [
@@ -35,12 +39,12 @@
 				"path": "./syntaxes/mavka.tmLanguage.json"
 			}
 		],
-                "snippets": [
-                    {
-                        "language": "мавка",
-                        "path": "./snippets/mavka.snippets.json"
-                    }
-                ]
+		"snippets": [
+			{
+				"language": "мавка",
+				"path": "./snippets/mavka.snippets.json"
+			}
+		]
 	},
 	"__metadata": {
 		"id": "8c2adcf7-0af5-47bc-861f-5a424d31fe53",
