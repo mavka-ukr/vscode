@@ -1,5 +1,8 @@
 # Change Log
 
+## [0.0.13]
+- додано більше ключових слів
+
 ## [0.0.12]
 - https://github.com/mavka-ukr/vscode/pull/10
 

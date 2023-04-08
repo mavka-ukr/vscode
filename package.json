@@ -3,7 +3,7 @@
 	"displayName": "Мавка",
 	"description": "Підтримка Мавки у VSCode",
 	"publisher": "mavka",
-	"version": "0.0.12",
+	"version": "0.0.13",
 	"icon": "images/logo.png",
 	"engines": {
 		"vscode": "^1.71.0"
