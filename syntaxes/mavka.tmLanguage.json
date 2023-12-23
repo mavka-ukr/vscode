@@ -82,13 +82,13 @@
 			"patterns": [
 				{
 					"comment": "виклик функції",
-					"name": "entity.name.function.mavka",
-					"match": "(?<!\\.)\\b(\\w+'?\\w+)\\s*\\("
-				},
-				{
-					"comment": "виклик методу",
-					"name": "entity.name.function.mavka",
-					"match": "(?<=\\.)\\b(\\w+'?\\w+)\\s*\\("
+					"begin": "(\\w+)\\(",
+					"beginCaptures": {
+						"1": {
+							"name": "entity.name.function.ccil"
+						}
+					},
+					"end": "\\)"
 				}
 			]
 		},
