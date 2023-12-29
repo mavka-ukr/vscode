@@ -1,106 +1,129 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Мавка",
-	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		},
-		{
-			"include": "#constants"
-		},
-		{
-			"include": "#comments"
-		},
-		{
-			"include": "#types"
-		},
-		{
-			"include": "#functions"
-		},
-		{
-			"include": "#variables"
-		}
-	],
-	"repository": {
-		"keywords": {
-			"patterns": [
-				{
-					"name": "keyword.control.mavka",
-					"match": "\\b(дія|структура|перебрати|якщо|чекати|взяти|дати|як|є|вернути|тривала|і|або|спробувати|зловити|інакше|впасти|поки|модуль|рівно|більше|менше|більше|менше|рівно|є|містить|макет|втілює|js|кінець|не|я|пустити|та)\\b"
-				}
-			]
-		},
-		"strings": {
-			"name": "string.quoted.double.mavka",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.mavka",
-					"match": "\\\\."
-				}
-			]
-		},
-		"constants": {
-			"patterns": [
-				{
-					"name": "constant.numeric.mavka",
-					"match": "\\b\\d+(\\.\\d+)?\\b"
-				}
-			]
-		},
-		"comments": {
-			"patterns": [
-				{
-					"name": "comment.line.mavka",
-					"match": ";;.*$"
-				},
-				{
-					"name": "comment.block.mavka",
-					"begin": ";\\-\\-.*",
-					"end": "\\-\\-;"
-				}
-			]
-		},
-		"types": {
-			"patterns": [
-				{
-					"name": "support.type.primitive.mavka",
-					"match": "\\b(текст|логічне|число|список|словник|обʼєкт|щось|ніщо|так|ні|пусто)\\b"
-				},
-				{
-					"comment": "назва структури",
-					"name": "support.type.struct.mavka",
-					"match": "(?<=структура\\s)\\b(\\w+'?\\w+)\\b"
-				}
-			]
-		},
-		"functions": {
-			"patterns": [
-				{
-					"comment": "виклик функції",
-					"begin": "(\\w+)\\(",
-					"beginCaptures": {
-						"1": {
-							"name": "entity.name.function.ccil"
-						}
-					},
-					"end": "\\)"
-				}
-			]
-		},
-		"variables": {
-			"patterns": [
-				{
-					"comment": "змінна",
-					"name": "variable.other.mavka",
-					"match": "\\b(\\w+'?\\w+)\\b"
-				}
-			]
-		}
-	},
-	"scopeName": "source.мавка"
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Мавка",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#constants"
+    },
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#types"
+    },
+    {
+      "include": "#functions"
+    },
+    {
+      "include": "#variables"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.mavka",
+          "match": "\\b(дія|структура|перебрати|якщо|чекати|взяти|дати|як|є|вернути|тривала|і|або|спробувати|зловити|інакше|впасти|поки|модуль|рівно|більше|менше|більше|менше|рівно|є|містить|макет|втілює|js|кінець|не|я|пустити|та)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.mavka",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.mavka",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "constants": {
+      "patterns": [
+        {
+          "name": "constant.numeric.mavka",
+          "match": "\\b\\d+(\\.\\d+)?\\b"
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.mavka",
+          "match": ";;.*$"
+        },
+        {
+          "name": "comment.block.mavka",
+          "begin": ";\\-\\-.*",
+          "end": "\\-\\-;"
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        {
+          "name": "support.type.primitive.mavka",
+          "match": "\\b(текст|логічне|число|список|словник|обʼєкт|щось|ніщо|так|ні|пусто)\\b"
+        },
+        {
+          "comment": "назва структури",
+          "name": "support.type.struct.mavka",
+          "match": "(?<=структура\\s)\\b(\\w+'?\\w+)\\b"
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "comment": "виклик функції",
+          "begin": "(\\w+)\\(",
+          "beginCaptures": {
+            "1": {
+              "name": "entity.name.function.ccil"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#keywords"
+            },
+            {
+              "include": "#strings"
+            },
+            {
+              "include": "#constants"
+            },
+            {
+              "include": "#comments"
+            },
+            {
+              "include": "#types"
+            },
+            {
+              "include": "#functions"
+            },
+            {
+              "include": "#variables"
+            }
+          ],
+          "end": "\\)"
+        }
+      ]
+    },
+    "variables": {
+      "patterns": [
+        {
+          "comment": "змінна",
+          "name": "variable.other.mavka",
+          "match": "\\b(\\w+'?\\w+)\\b"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.мавка"
 }
