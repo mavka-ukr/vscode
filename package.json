@@ -3,13 +3,14 @@
 	"displayName": "Мавка",
 	"description": "Підтримка Мавки у VSCode",
 	"publisher": "mavka",
-	"version": "0.0.15",
+	"version": "0.0.16",
 	"icon": "images/logo.png",
 	"engines": {
 		"vscode": "^1.71.0"
 	},
 	"categories": [
-		"Programming Languages", "Snippets"
+		"Programming Languages",
+		"Snippets"
 	],
 	"repository": {
 		"url": "https://github.com/mavka-ukr/vscode"

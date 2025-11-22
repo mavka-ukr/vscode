@@ -13,15 +13,6 @@
     },
     {
       "include": "#comments"
-    },
-    {
-      "include": "#types"
-    },
-    {
-      "include": "#functions"
-    },
-    {
-      "include": "#variables"
     }
   ],
   "repository": {
@@ -29,7 +20,7 @@
       "patterns": [
         {
           "name": "keyword.control.mavka",
-          "match": "\\b(дія|структура|перебрати|якщо|чекати|взяти|дати|як|є|вернути|тривала|і|або|спробувати|зловити|інакше|впасти|поки|модуль|рівно|більше|менше|більше|менше|рівно|є|містить|макет|втілює|js|кінець|не|я|пустити|та)\\b"
+          "match": "\\b(дія|структура|перебрати|якщо|чекати|взяти|взяти модуль|взяти пак|дати|як|є|вернути|тривала|і|або|спробувати|зловити|інакше|впасти|поки|модуль|рівно|більше|менше|містить|кінець|не|я|дійсне|недійсне|предмет|послідовність)\\b"
         }
       ]
     },
@@ -60,67 +51,8 @@
         },
         {
           "name": "comment.block.mavka",
-          "begin": ";\\-\\-.*",
-          "end": "\\-\\-;"
-        }
-      ]
-    },
-    "types": {
-      "patterns": [
-        {
-          "name": "support.type.primitive.mavka",
-          "match": "\\b(текст|логічне|число|список|словник|обʼєкт|щось|ніщо|так|ні|пусто)\\b"
-        },
-        {
-          "comment": "назва структури",
-          "name": "support.type.struct.mavka",
-          "match": "(?<=структура\\s)\\b(\\w+'?\\w+)\\b"
-        }
-      ]
-    },
-    "functions": {
-      "patterns": [
-        {
-          "comment": "виклик функції",
-          "begin": "(\\w+)\\(",
-          "beginCaptures": {
-            "1": {
-              "name": "entity.name.function.ccil"
-            }
-          },
-          "patterns": [
-            {
-              "include": "#keywords"
-            },
-            {
-              "include": "#strings"
-            },
-            {
-              "include": "#constants"
-            },
-            {
-              "include": "#comments"
-            },
-            {
-              "include": "#types"
-            },
-            {
-              "include": "#functions"
-            },
-            {
-              "include": "#variables"
-            }
-          ],
-          "end": "\\)"
-        }
-      ]
-    },
-    "variables": {
-      "patterns": [
-        {
-          "comment": "змінна",
-          "name": "variable.other.mavka",
-          "match": "\\b(\\w+'?\\w+)\\b"
+          "begin": ";\\*.*",
+          "end": "\\*;"
         }
       ]
     }
