@@ -46,16 +46,5 @@
 				"path": "./snippets/mavka.snippets.json"
 			}
 		]
-	},
-	"__metadata": {
-		"id": "8c2adcf7-0af5-47bc-861f-5a424d31fe53",
-		"publisherId": "600a6499-8063-4adf-92b1-b5b41744b726",
-		"publisherDisplayName": "Мавка",
-		"targetPlatform": "undefined",
-		"isApplicationScoped": false,
-		"updated": true,
-		"isPreReleaseVersion": false,
-		"installedTimestamp": 1678613395515,
-		"preRelease": false
 	}
 }
